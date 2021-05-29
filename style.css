@@ -1,0 +1,177 @@
+header {
+  text-align: center;
+  font-style:inherit;
+  padding: auto;
+  border-bottom: rgb(252, 230, 244) 4px solid;
+}
+
+body {
+  background-image: url('../TipCalculator/img/Rainbow-Gradient.png'); 
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: grid;
+  place-content: center;
+  color: darkblue;
+}
+
+section h1 {
+  font-style:oblique;
+  color: darkblue;
+}
+
+section h3 {
+  font-style: italic;
+  color: blue;
+}
+
+/* Text box for total bill amount*/
+input[type=number] {
+  width: 35%;
+  padding: 10px;
+  margin: 2px 0;
+  box-sizing: border-box;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+}
+
+/* Raddio buttons */
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 2px 150px;
+  margin: 10px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, .14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 1%, 45%);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 900;
+
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(264, 59%, 25%);
+}
+
+/* Dropdown with value for number of person */
+
+.box select {
+  background-color: #a2cbee;
+  color: rgb(251, 251, 253);
+  padding: 5px;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  appearance: button;
+}
+
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 10px;
+}
+
+
+/* Button to calculate the tip*/
+button {
+  background-color: rgb(15, 15, 160);
+  border: none;
+  border-radius: 10px;
+  color: aqua;
+  padding: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 50%;
+  font-style: italic;
+  font-size: inherit;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {
+  background-color: rgb(132, 236, 236);
+  color: rgb(15, 15, 160);
+}
+
+button:active {
+  background-color: rgb(66, 17, 243);
+  color: aqua;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+footer {
+  padding: 5px;
+  margin-bottom: 15px;
+  font-weight:inherit;
+  color: blue;
+}

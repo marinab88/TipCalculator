@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Tip Calculator</h1>
+    </div>
+  </header>
+  <section>
+    <h1>Welcome in our Restaurant!</h1>
+    <h3>Here you can calculate the tip for the waitress.</h3>
+      
+      <p>The total bill amount:</p>
+      <label for="bill">$</label>
+      <input type="number" id="bill" name="bill"> 
+             
+      <p>The service level:</p> 
+     
+        <label class="rad-label">
+        <input type="radio" class="rad-input" id="level1" name="serviceLevel" value="0.3">
+        <div class="rad-design"></div>
+        <div class="rad-text" for="outstnd">Outstanding-30%</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio" class="rad-input" id="level2" name="serviceLevel" value="0.2">
+        <div class="rad-design"></div>
+        <div class="rad-text" for="good">Good-20%</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio" class="rad-input" id="level3" name="serviceLevel" value="0.15">
+        <div class="rad-design"></div>
+        <div class="rad-text" for="okish">OKish-15%</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio" class="rad-input" id="level4" name="serviceLevel" value="0.1">
+        <div class="rad-design"></div>
+        <div class="rad-text" for="bad">Bad-10%</div>
+      </label>
+      <label class="rad-label">
+        <input type="radio" class="rad-input" id="level5" name="serviceLevel" value="0">
+        <div class="rad-design"></div>
+        <div class="rad-text" for="never">Never coming back - 0% </div>
+      </label>
+    
+      <p>The number of persons that are splitting the bill:</p>
+      <div class="box">
+        <select name="" id="numOfPerson">
+          <option selected disabled hidden value="0">Select number of person</option>
+          <option value="1">1 Person</option>
+          <option value="2">2 Persons</option>
+          <option value="3">3 Persons</option>
+          <option value="4">4 Persons</option>
+          <option value="5">5 Persons</option>
+          <option value="6">6 Persons</option>
+          <option value="7">7 Persons</option>
+          <option value="8">8 Persons</option>
+          <option value="9">9 Persons</option>
+          <option value="10">10 Persons</option>
+        </select>
+      </div>
+      
+      <button id="calculator">Calculate the Tip Value</button>
+      
+      <h1 id="displayValue">
+        <!--Display the tip value--> 
+      </h1>
+      </section>
+
+<footer>
+  <p>Made by Bucsa Marina, Copyright &copy; 2021 </p>
+</footer>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
